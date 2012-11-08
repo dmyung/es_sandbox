@@ -13,3 +13,5 @@ From the basic 001 json file, most types are defined in the given file. From the
 Future iterations should focus on mappings defined and how they alter the tolerance of the index.
 
 Additional type definitions for datetime deviations and formatting is also needed.
+
+To run, just do python es_tester.py to see the results of the submissions.
