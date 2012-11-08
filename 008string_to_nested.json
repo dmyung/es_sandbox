@@ -1,0 +1,15 @@
+{
+	"userstring" : "008string_to_nested",
+	"somedate" : "2009-11-15T14:12:12",
+	"message" : "trying out Elastic Search",
+	"start_dict": {
+		"substring": "bar",
+		"subint": 1,
+		"subdate" : "2012-11-15T14:12:12"
+	},
+	"somenumber": 100,
+	"somestring": {
+		"foo": "now a nested type",
+		"bar": 123
+	}
+}

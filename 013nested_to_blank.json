@@ -1,0 +1,8 @@
+{
+	"userstring" : "013nested_to_blank",
+	"somedate" : "2009-11-15T14:12:12",
+	"message" : "trying out Elastic Search",
+	"start_dict": "",
+	"somenumber": 100,
+	"somestring": "foobar"
+}

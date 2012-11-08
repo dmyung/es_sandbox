@@ -1,0 +1,15 @@
+{
+	"userstring" : "015_date_to_nested",
+	"somedate" : {
+		"somedate_foo_string": "some string",
+		"somedate_foo_int": 123
+	},
+	"message" : "trying out Elastic Search",
+	"start_dict": {
+		"substring": "bar",
+		"subint": 1,
+		"subdate" : "2012-11-15T14:12:12"
+	},
+	"somenumber": 100,
+	"somestring": "foobar"
+}

@@ -1,0 +1,12 @@
+{
+	"userstring" : "007subdate_to_blank",
+	"somedate" : "2009-11-15T14:12:12",
+	"message" : "trying out Elastic Search",
+	"start_dict": {
+		"substring": "bar",
+		"subint": 1,
+		"subdate" : ""
+	},
+	"somenumber": 100,
+	"somestring": "foobar"
+}

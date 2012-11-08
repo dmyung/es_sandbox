@@ -1,0 +1,8 @@
+{
+	"userstring" : "002subdoc_to_string",
+	"somedate" : "2009-11-15T14:12:12",
+	"message" : "trying out Elastic Search",
+	"start_dict": "now a string",
+	"somenumber": 100,
+	"somestring": "foobar"
+}
