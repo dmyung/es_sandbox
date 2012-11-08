@@ -2,7 +2,7 @@ import simplejson
 import rawes
 import os
 
-ES_HOST = 'vmlocal'
+ES_HOST = 'localhost'
 ES_PORT = 9200
 ES_TYPE = 'testtype'
 
