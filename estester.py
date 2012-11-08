@@ -11,7 +11,7 @@ def get_es():
 
 index_mappings = {
 'nothing': None,
-'nodate': {'date_detection': False},
+'nodate': {'nodate': {'date_detection': False}},
 #typed...
 }
 
@@ -20,6 +20,7 @@ def main():
     files.sort()
 
     for index, mapping  in index_mappings.items():
+        print "================= Index %s ====================" % index
         es = get_es()
         if es.head(index):
             es.delete(index)
