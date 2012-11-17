@@ -33,6 +33,7 @@ index_mappings = {
 }
 
 def main():
+    import hashlib
     files = os.listdir('.')
     files.sort()
 
@@ -44,6 +45,7 @@ def main():
         es.put(index)
         if mapping is not None:
             print es.put("%s/%s/_mapping" % (index, index), data=mapping)
+        curr_mapping = None
         for x in files:
             if x.endswith('.json'):
                 filenum = int(x[0:3])
@@ -52,8 +54,14 @@ def main():
                     res = es.put("%s/%s/%d" % (index, index, filenum), data=simplejson.loads(fin.read()))
                     if res.get('status',None) == 400:
                         success=False
-                print "%s, %s => %s" % (index, x, 'SUCCESS' if success else
-                'FAIL')
+                    check_mapping = es.get('%s/%s/_mapping?pretty=true' % (index, index))
+                print "#### %s, %s => %s" % (index, x, 'SUCCESS' if success else
+                'FAIL,%s' % res['error'])
+
+                if simplejson.dumps(check_mapping) != simplejson.dumps(curr_mapping):
+                    curr_mapping = check_mapping
+                    print curr_mapping
+                print ""
 
 if __name__ == "__main__":
     main()
