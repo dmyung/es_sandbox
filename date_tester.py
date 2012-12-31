@@ -6,7 +6,7 @@ import random
 
 #Utils for testing date time parsing events
 
-ES_HOST = 'localhost'
+ES_HOST = 'vmlocal'
 ES_PORT = 9200
 ES_TYPE = 'testtype'
 
@@ -27,6 +27,7 @@ date_format_arr = ["yyyy-MM-dd",
         "yyyy-MM-dd'T'HH:mm:ss",
         "yyyy-MM-dd' 'HH:mm:ss",
         "yyyy-MM-dd' 'HH:mm:ss.SSSSSS",
+        "mm/dd/yy' 'HH:mm:ss",
 ] 
 #https://github.com/elasticsearch/elasticsearch/issues/2132
 #elasticsearch Illegal pattern component: t
@@ -105,7 +106,12 @@ index_mappings = {
                     "unique_11": {
                             #"format": "dateOptionalTime",
                             "format": formats_string,
+                            },
+                    "unique_12": {
+                            #"format": "dateOptionalTime",
+                            "format": formats_string,
                             }
+
                     }
                 }
             },
@@ -136,6 +142,7 @@ date_examples = [
         'Fri, 16 Nov 2012', #9 github example
         None, #10
         '', #11
+        '11/10/09 21:23:43', #12 old xform submissions
         ]
 
 def main():
