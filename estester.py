@@ -2,7 +2,7 @@ import simplejson
 import rawes
 import os
 
-ES_HOST = 'localhost'
+ES_HOST = 'vmlocal'
 ES_PORT = 9200
 ES_TYPE = 'testtype'
 
@@ -47,6 +47,7 @@ def main():
             print es.put("%s/%s/_mapping" % (index, index), data=mapping)
         curr_mapping = None
         for x in files:
+            print x
             if x.endswith('.json'):
                 filenum = int(x[0:3])
                 success=True

@@ -2,12 +2,8 @@
 	"userstring" : "001baseline",
 	"somedate" : "2009-11-15T14:12:12",
 	"message" : "trying out Elastic Search",
-	"start_dict": {
-		"substring": "bar",
-		"subint": 1,
-		"subdate" : "2012-11-15T14:12:12"
-	},
+	"start_dict": ["now", "i'm", "a", "list"],
 	"somenumber": 100,
 	"somestring": "foobar",
-    "somelist": ["foo","bar"]
+    "somelist": ["foo','bar"]
 }

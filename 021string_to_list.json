@@ -1,5 +1,5 @@
 {
-	"userstring" : "001baseline",
+	"userstring" : ["a","b","c"],
 	"somedate" : "2009-11-15T14:12:12",
 	"message" : "trying out Elastic Search",
 	"start_dict": {

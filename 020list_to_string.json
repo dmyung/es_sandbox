@@ -9,5 +9,5 @@
 	},
 	"somenumber": 100,
 	"somestring": "foobar",
-    "somelist": ["foo","bar"]
+    "somelist": "now some string"
 }
